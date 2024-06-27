@@ -1,0 +1,84 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    background-color: hsl(222, 26%, 31%);
+    color: hsl(0, 0%, 100%);
+    margin: 20px 50px;
+    padding: 40px 90px;
+    width: 100vh;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+.screen {
+    background-color: hsl(224, 36%, 15%);
+    display: flex;
+    justify-content: right;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+}
+main {
+    background-color: hsl(223, 31%, 20%);
+    padding: 15px;
+}
+main .primary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.secondary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+main button {
+    border-radius: 6px;
+    padding: 10px;
+    font-weight: 700;
+    color: hsl(221, 14%, 31%);
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: 1px 3px 1px hsl(28, 16%, 65%);
+}
+button:hover {
+    background-color: hsl(30, 25%, 89%);
+    transition: ease 0.3s;
+    transform: scale(1.1);
+    filter: brightness(180%);
+}
+.delete, .reset {
+    background-color: hsl(225, 21%, 49%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 1px 3px 1px  hsl(224, 28%, 35%);
+}
+.result {
+    background-color: hsl(6, 63%, 50%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 1px 3px 1px  hsl(6, 70%, 34%);
+}
+.delete:hover, .reset:hover {
+    filter: brightness(180%);
+    background-color: hsl(225, 21%, 49%);
+    color: hsl(0, 0%, 100%);
+}
+.result:hover {
+    filter: brightness(180%);
+    background-color: hsl(6, 63%, 50%);
+    color: hsl(28, 16%, 65%);
+}
