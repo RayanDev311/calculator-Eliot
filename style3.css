@@ -16,13 +16,35 @@ body {
     font-size: 32px;
     background-color: hsl(268, 75%, 9%);
     color:  hsl(52, 100%, 62%);
-    margin: 20px 50px;
+    margin: 80px 30px;
     padding: 40px 90px;
-    width: 100vh;
+    width: 150vh;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
+}
+.theme-toggle {
+    width: 50px;
+    height: 15px;
+    background-color: hsl(268, 47%, 21%);
+    margin: 5px 0;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.theme-toggle:after  {
+    content: "";
+    width: 12px;
+    height: 12px;
+    top: 2px;
+    left: 35px;
+    border-radius: 10px;
+    position: absolute;
+    transition: 0.4s;
+    background-color: hsl(176, 100%, 44%);
 }
 .screen {
     background-color: hsl(268, 71%, 12%);
@@ -56,7 +78,7 @@ main .primary {
 }
 main button {
     border-radius: 6px;
-    padding: 10px;
+    padding: 15px;
     font-weight: 700;
     cursor: pointer;
     color: hsl(52, 100%, 62%);
@@ -88,4 +110,20 @@ button:hover {
     filter: brightness(180%);
     background-color: hsl(176, 100%, 44%);
     color:  hsl(198, 20%, 13%);
+}
+
+
+
+
+
+/* Thème clair */
+.theme-light {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Thème sombre */
+.theme-dark {
+    background-color: #333;
+    color: #f0f0f0;
 }

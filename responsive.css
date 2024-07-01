@@ -1,0 +1,11 @@
+@media (max-width:600px) {
+    
+    body .app-container {
+        margin: 0;
+        padding: 35px 15px;
+        width: 100%;
+    }
+    .screen {
+        margin: 15px 0;
+    }
+}
