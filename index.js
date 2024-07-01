@@ -34,4 +34,114 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const keys = document.querySelector('.keys');
+    const inputDisplay = document.querySelector('.input');
+    const outputDisplay = document.querySelector('.output');
+    const screen = document.querySelector('.screen');
+
+    let currentInput = '';
+    let expression = '';
+    let lastActionWasCalculation = false;
+
+    keys.addEventListener('click', event => {
+        const { target } = event;
+        const { key } = target.dataset;
+
+        if (!target.matches('button')) {
+            return;
+        }
+
+        switch (key) {
+            case '+':
+            case '-':
+            case '*':
+            case '/':
+                appendOperator(key);
+                break;
+            case '=':
+                calculate();
+                break;
+            case 'delete':
+                deleteLast();
+                break;
+            case 'reset':
+                resetCalculator();
+                break;
+            default:
+                appendNumber(key);
+        }
+    });
+
+    function appendNumber(number) {
+        if (lastActionWasCalculation) {
+            expression = '';
+            outputDisplay.textContent = '';
+            lastActionWasCalculation = false;
+        }
+        if (currentInput.includes('.') && number === '.') return;
+        currentInput = currentInput.toString() + number.toString();
+        updateDisplay();
+    }
+
+    function appendOperator(op) {
+        if (currentInput === '' && expression === '') return;
+        if (currentInput === '' && expression !== '') {
+            expression = expression.slice(0, -1) + op;
+        } else {
+            expression += currentInput + op;
+            currentInput = '';
+        }
+        lastActionWasCalculation = false;
+        updateDisplay();
+    }
+
+    function calculate() {
+        if (currentInput === '' && expression === '') return;
+        expression += currentInput;
+        try {
+            const result = Function('return ' + expression)(); // Using Function constructor instead of eval
+            outputDisplay.textContent = result;
+            expression = result.toString();
+            currentInput = '';
+        } catch (error) {
+            outputDisplay.textContent = 'Error';
+            expression = '';
+            currentInput = '';
+        }
+        lastActionWasCalculation = true;
+        updateDisplay(true);
+    }
+
+    function deleteLast() {
+        if (currentInput !== '') {
+            currentInput = currentInput.slice(0, -1);
+        } else if (expression !== '') {
+            expression = expression.slice(0, -1);
+        }
+        updateDisplay();
+    }
+
+    function resetCalculator() {
+        currentInput = '';
+        expression = '';
+        outputDisplay.textContent = '';
+        updateDisplay();
+    }
+
+    function updateDisplay(resultShown = false) {
+        if (resultShown) {
+            inputDisplay.textContent = '';
+        } else {
+            inputDisplay.textContent = expression + currentInput;
+        }
+        resetScreen();
+    }
+});
+
+
+
+
+
+
 

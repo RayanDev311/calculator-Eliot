@@ -6,21 +6,20 @@
     border: none;
     outline: none;
     overflow: hidden;
+    font-family: "League Spartan", sans-serif;
 }
 body {
     display: flex;
     justify-content: center;
+    background-color: hsl(222, 26%, 31%);
 }
 
 .app-container {
-    font-family: "League Spartan", sans-serif;
     font-weight: 700;
     font-size: 32px;
-    background-color: hsl(222, 26%, 31%);
     color: hsl(0, 0%, 100%);
-    margin: 80px 30px;
-    padding: 40px 90px;
-    width: 150vh;
+    width: 100vh;
+    margin: 70px;
 }
 .navbar {
     display: flex;
@@ -52,9 +51,15 @@ body {
     background-color: hsl(224, 36%, 15%);
     display: flex;
     justify-content: right;
-    padding: 15px;
+    padding: 25px;
     margin: 15px 0;
     border-radius: 6px;
+}
+.screen .input {
+    justify-content: left;
+}
+.screen .output {
+    justify-content: right;
 }
 main {
         background-color: hsl(223, 31%, 20%);
@@ -82,7 +87,7 @@ main button {
 button:hover {
     transition: ease 0.3s;
     transform: scale(1.1);
-    filter: brightness(180%);
+    filter: brightness(130%);
 }
 .delete, .reset {
     background-color: hsl(225, 21%, 49%);
@@ -95,12 +100,12 @@ button:hover {
     box-shadow: 1px 3px 1px  hsl(6, 70%, 34%);
 }
 .delete:hover, .reset:hover {
-    filter: brightness(180%);
+    filter: brightness(130%);
     background-color: hsl(225, 21%, 49%);
     color: hsl(0, 0%, 100%);
 }
 .result:hover {
-    filter: brightness(180%);
+    filter: brightness(130%);
     background-color: hsl(6, 63%, 50%);
     color: hsl(28, 16%, 65%);
 }

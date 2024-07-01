@@ -13,8 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
   <!-- CSS Files Links -->
   <link rel="stylesheet" id="theme-style" href="style1.css"><!--
-  <link rel="stylesheet" id="theme-style" href="style3.css">
-  <link rel="stylesheet" id="theme-style" href="style2.css">*/-->
+  <link rel="stylesheet" id="theme-style" href="style2.css">
+  <link rel="stylesheet" id="theme-style" href="style3.css">-->
   <link rel="stylesheet" href="responsive.css">
 
 
@@ -42,30 +42,30 @@
         </div>
         <main class="keys" >
             <div class="primary">
-                <button onclick="calculate" id="7" >7</button>
-                <button onclick="calculate" id="8" >8</button>
-                <button onclick="calculate" id="9" >9</button>
-                <button onclick="calculate" id="delete" class="delete">DEL</button>
+                <button class="key" data-key="7" >7</button>
+                <button class="key" data-key="8" >8</button>
+                <button class="key" data-key="9" >9</button>
+                <button data-key="delete" class="key delete">DEL</button>
 
-                <button onclick="calculate" id="4" >4</button>
-                <button onclick="calculate" id="5" >5</button>
-                <button onclick="calculate" id="6" >6</button>
-                <button onclick="calculate" id="+"  class="operator" >+</button>
+                <button class="key" data-key="4" >4</button>
+                <button class="key" data-key="5" >5</button>
+                <button class="key" data-key="6" >6</button>
+                <button data-key="+"  class="key operator" >+</button>
 
-                <button onclick="calculate" id="1"  >1</button>
-                <button onclick="calculate" id="2" >2</button>
-                <button onclick="calculate" id="3" >3</button>
-                <button onclick="calculate" id="-" class="operator" >-</button>
+                <button class="key" data-key="1"  >1</button>
+                <button class="key" data-key="2" >2</button>
+                <button class="key" data-key="3" >3</button>
+                <button data-key="-" class="key operator" >-</button>
 
-                <button onclick="calculate" id=".">.</button>
-                <button onclick="calculate" class="">0</button>
-                <button onclick="calculate" id="/" class="operator">/</button>
-                <button onclick="calculate" id="x" class="operator">x</button>
+                <button class="key" data-key=".">.</button>
+                <button class="key" data-key="0">0</button>
+                <button data-key="/" class="key operator">÷</button>
+                <button data-key="*" class="key operator">x</button>
             </div>
             <div class="secondary">
-                <button onclick="calculate" id="reset" class="reset">RESET</button>
-                <button onclick="calculate" id="equals" class="result">=</button>
-            </div>    
+                <button data-key="reset" class="key reset">RESET</button>
+                <button data-key="=" class="key result">=</button>
+            </div>
 
         </main>
         

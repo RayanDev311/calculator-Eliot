@@ -1,5 +1,6 @@
 
 * {
+    font-family: "League Spartan", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,16 +10,14 @@
 body {
     display: flex;
     justify-content: center;
+    background-color: hsl(268, 75%, 9%);
 }
 .app-container {
-    font-family: "League Spartan", sans-serif;
     font-weight: 700;
     font-size: 32px;
-    background-color: hsl(268, 75%, 9%);
     color:  hsl(52, 100%, 62%);
-    margin: 80px 30px;
-    padding: 40px 90px;
-    width: 150vh;
+    width: 100vh;
+    margin: 70px;
 }
 .navbar {
     display: flex;
@@ -50,13 +49,12 @@ body {
     background-color: hsl(268, 71%, 12%);
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 25px;
     margin: 15px 0;
     border-radius: 6px;
 }
 .screen .input {
     justify-content: left;
-    color: white;
 }
 .screen .output {
     justify-content: right;
@@ -89,7 +87,7 @@ button:hover {
     background-color:  hsl(268, 47%, 21%);
     transition: ease 0.3s;
     transform: scale(1.1);
-    filter: brightness(180%);
+    filter: brightness(130%);
 }
 .delete, .reset {
     background-color: hsl(281, 89%, 26%);
@@ -102,28 +100,12 @@ button:hover {
     box-shadow: 1px 3px 1px hsl(177, 92%, 70%);
 }
 .delete:hover, .reset:hover {
-    filter: brightness(180%);
+    filter: brightness(130%);
     background-color: hsl(281, 89%, 26%);
     color: hsl(0, 0%, 100%);
 }
 .result:hover {
-    filter: brightness(180%);
+    filter: brightness(130%);
     background-color: hsl(176, 100%, 44%);
     color:  hsl(198, 20%, 13%);
-}
-
-
-
-
-
-/* Thème clair */
-.theme-light {
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-/* Thème sombre */
-.theme-dark {
-    background-color: #333;
-    color: #f0f0f0;
 }

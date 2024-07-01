@@ -1,5 +1,6 @@
 
 * {
+    font-family: "League Spartan", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,16 +10,14 @@
 body {
     display: flex;
     justify-content: center;
+    background-color:  hsl(0, 0%, 90%);
 }
 .app-container {
-    font-family: "League Spartan", sans-serif;
     font-weight: 700;
     font-size: 32px;
-    background-color:  hsl(0, 0%, 90%);
     color: hsl(60, 10%, 19%);
-    margin: 80px 30px;
-    padding: 40px 90px;
-    width: 150vh;
+    width: 100vh;
+    margin: 70px;
 }
 .navbar {
     display: flex;
@@ -50,9 +49,15 @@ body {
     background-color: hsl(0, 0%, 93%);
     display: flex;
     justify-content: right;
-    padding: 15px;
+    padding: 25px;
     margin: 15px 0;
     border-radius: 6px;
+}
+.screen .input {
+    justify-content: left;
+}
+.screen .output {
+    justify-content: right;
 }
 main {
     background-color: hsl(0, 5%, 81%);
@@ -78,9 +83,9 @@ main button {
     box-shadow: 1px 3px 1px  hsl(35, 11%, 61%);
 }
 button:hover {
-    background-color:  hsl(0, 0%, 100%);
     transition: ease 0.3s;
     transform: scale(1.1);
+    filter: brightness(130%);
 }
 .delete, .reset {
     background-color:  hsl(185, 42%, 37%);
